@@ -135,7 +135,7 @@ I found two problems while checking the workflow:
 	showed `Error log detected` in the reasons for both anomaly events.
 
 Both corrections keep the existing detector, producer, topic, consumer, and pipeline structure.
-The final run processed all 10 records and delivered both anomaly events to the AIOps output.
+The final run processed all 10 records and delivered both anomaly events to the AIOps output...
 
 ## Task 6: End-to-End Pipeline Execution
 
