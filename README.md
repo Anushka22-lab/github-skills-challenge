@@ -156,6 +156,26 @@ The final output confirmed the complete workflow:
 
 This confirms the full path from operational data to the final AIOps output.
 
+## Task 7: Reproducing the Demonstration
+
+The earlier sections describe the scenario, the data and logs, the normal and unusual
+observations, the detector results, the event flow, the corrections, and the final output.
+
+To reproduce the demonstration:
+
+1. Open the repository in a Codespace or a local Python environment.
+2. Install the packages listed in `requirements.txt` with `python3 -m pip install -r requirements.txt`.
+3. From the project folder, run `python3 src/aiops_pipeline.py`.
+4. Check that the output says 10 records were processed, 2 anomalies were detected, and 2 events
+	were consumed.
+5. Check that the output lists the payment service timeout at 10:05 and the database connection
+	timeout at 10:06.
+
+The main limitation is that this is a small in-memory simulation. The event topic does not save
+messages after the program stops, and the detector uses fixed thresholds instead of learning from
+normal service behaviour. A future improvement would be to store events in a real streaming system
+and use a baseline that adjusts as the service changes.
+
 ---
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
